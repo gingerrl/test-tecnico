@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name-input {
+  color: black;
+  font-weight: 400;
+}
+
+.button-search {
+  color: #000;
+  background-color: #0dcaf0;
+  border-color: #0dcaf0;
+}

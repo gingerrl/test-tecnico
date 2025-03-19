@@ -1,0 +1,18 @@
+<div>
+  <form class="form-horizontal" role="search">
+    <div class="form-group row">
+      <div class="col-sm-2 name-input">{{ nameInput }}</div>
+      <div class="col-sm-6">
+        <input
+          class="form-control"
+          [placeholder]="placeholder"
+          aria-label="Search"
+          (keyup)="onInputSearch($event)"
+        />
+      </div>
+      <!-- <div class="col-sm-4">
+        <button class="btn btn-info" type="submit"> <i class="bi bi-search"></i> Buscar</button>
+      </div> -->
+    </div>
+  </form>
+</div>

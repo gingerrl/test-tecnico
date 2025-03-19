@@ -1,0 +1,40 @@
+<div
+  class="modal fade show"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+  style="
+    display: block;
+    padding-left: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(0.025em);
+  "
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div
+        class="modal-body"
+        style="display: flex; align-items: center; flex-direction: column"
+      >
+        <i
+          class="bi bi-exclamation-circle"
+          style="
+            color: red;
+            font-size: 5em;
+            justify-content: center;
+            display: flex;
+          "
+        ></i>
+        <h1>Estas seguro?</h1>
+        <label>No podrás revertir esto!</label>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="onDeleteItem()">
+          Sí, eliminarlo!
+        </button>
+        <button type="button" class="btn btn-danger" (click)="onButtonCancel()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>

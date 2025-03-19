@@ -4,15 +4,12 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
-  styleUrl: './login-page.component.css'
+  styleUrl: './login-page.component.css',
 })
 export class LoginPageComponent {
+  constructor(private readonly router: Router) {}
 
-  constructor(
-    private readonly router: Router
-  ){}
-
-  onButtonInit(){
-    this.router.navigate(['/invoice-consult/home'])
+  onButtonInit() {
+    this.router.navigate(['/invoice-consult/home']);
   }
 }

@@ -8,16 +8,14 @@ import { Router } from '@angular/router';
 describe('MainPageComponent', () => {
   let component: MainPageComponent;
   let fixture: ComponentFixture<MainPageComponent>;
-  let router: Router
+  let router: Router;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [MainPageComponent],
-      imports: [ RouterTestingModule],
+      imports: [RouterTestingModule],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-
-    })
-    .compileComponents();
+    }).compileComponents();
 
     fixture = TestBed.createComponent(MainPageComponent);
     component = fixture.componentInstance;
@@ -27,5 +25,12 @@ describe('MainPageComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should onButtonLogout', () => {
+    const navigate = jest.spyOn(router, 'navigate').mockImplementation();
+
+    component.onButtonLogout();
+    expect(navigate).toHaveBeenCalledWith(['/login']);
   });
 });

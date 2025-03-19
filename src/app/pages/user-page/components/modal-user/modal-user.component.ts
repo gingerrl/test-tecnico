@@ -44,7 +44,7 @@ export class ModalUserComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.eventBus.on('customer-edit').subscribe((meta: MetaData) => {
+    this.eventBus.on('edit-user').subscribe((meta: MetaData) => {
       this.isCreate = false;
       this.onListChanges(meta.data);
     });

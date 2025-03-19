@@ -38,6 +38,9 @@
   </table>
 </div>
 
+<div *ngIf="showUpdateUser">
+  <app-modal-user (closeModal)="onModalClose()"></app-modal-user>
+</div>
 
 <div *ngIf="showModalDelete">
   <app-modal-delete

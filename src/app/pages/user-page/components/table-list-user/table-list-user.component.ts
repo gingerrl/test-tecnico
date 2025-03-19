@@ -32,6 +32,10 @@ export class TableListUserComponent {
     this.showUpdateUser = true;
   }
 
+  onModalClose() {
+    this.showUpdateUser = false;
+  }
+
   onButtonDelete(item: User) {
     this.itemUserDel = item;
     this.showModalDelete = true;

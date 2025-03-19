@@ -1,5 +1,24 @@
 {
-  "invoice": [],
+  "invoice": [
+    {
+      "id":"1",
+      "num": "12" ,
+      "date": "19-03-2025",
+      "customer": "Valeria Pindo",
+      "seller": "Ginger Romo",
+      "status": "Activo",
+      "total": "520.20"
+    },
+    {
+      "id":"2",
+      "num": "10" ,
+      "date": "19-03-2025",
+      "customer": "Mateo Romo",
+      "seller": "Ginger Romo",
+      "status": "Activo",
+      "total": "20.00"
+    }
+  ],
   "product": [
     {
       "id": "",
@@ -80,11 +99,11 @@
   "user": [
     {
       "id": "541",
-      "firstName": "Paolo",
-      "lastName": "Romo",
-      "fullName": "Paolo Romo",
-      "user": "sromo",
-      "email": "paolo@gmail.com"
+      "firstName": "Luis",
+      "lastName": "Paz",
+      "fullName": "Luis Pax",
+      "user": "luisito",
+      "email": "luispaz@gmail.com"
     },
     {
       "id": "173",

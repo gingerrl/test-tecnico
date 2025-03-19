@@ -81,7 +81,6 @@ export class ModalUserComponent implements OnInit {
   }
 
   onListChanges(item: User) {
-    console.log(item);
     this.form.setValue({
       id: item.id,
       firstName: item.firstName,

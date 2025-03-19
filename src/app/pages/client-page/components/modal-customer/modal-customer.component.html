@@ -1,0 +1,113 @@
+<div
+  class="modal fade show"
+  id="editModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  style="
+    display: block;
+    padding-left: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(0.025em);
+  "
+  aria-modal="true"
+  role="dialog"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          {{ isCreate ? "Agregar cliente" : "Editar cliente" }}
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          (click)="onModalClose()"
+
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form
+          method="post"
+          id="actualizarDatos"
+          name="actualizarDatos"
+          [formGroup]="form"
+        >
+          <div id="resultado_ajax_2"></div>
+          <div class="mb-2">
+            <label for="mod_codigo" class="col-form-label">Nombre:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="mod_nombre"
+              name="mod_nombre"
+              required=""
+              formControlName="name"
+            />
+            <input type="hidden" name="mod_id" id="mod_id" value="4129" />
+          </div>
+          <div class="mb-2">
+            <label for="mod_nombre" class="col-form-label">Teléfono:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="mod_telefono"
+              name="mod_telefono"
+              formControlName="phone"
+            />
+          </div>
+
+          <div class="mb-2">
+            <label for="mod_email" class="col-form-label">E-mail:</label>
+            <input
+              type="email"
+              class="form-control"
+              id="mod_email"
+              name="mod_email"
+              formControlName="email"
+            />
+          </div>
+
+          <div class="mb-2">
+            <label for="mod_direccion" class="col-form-label">Dirección:</label>
+            <textarea
+              class="form-control"
+              id="mod_direccion"
+              name="mod_direccion"
+              formControlName="address"
+            ></textarea>
+          </div>
+
+          <div class="mb-2">
+            <label for="mod_estado" class="col-form-label">Estado:</label>
+            <select
+              class="form-control"
+              id="mod_estado"
+              name="mod_estado"
+              required=""
+              formControlName="status"
+            >
+              <option value="">-- Selecciona estado --</option>
+              <option value="Activo" selected="">Activo</option>
+              <option value="Inactivo">Inactivo</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+          (click)="onModalClose()"
+        >
+          Cerrar
+        </button>
+        <button type="submit" class="btn btn-primary" (click)="onButtonInit()">
+          {{ isCreate ? "Guardar datos" : "Actualizar datos" }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="container card my-3">
+  <div class="d-flex card-header">
+    <div class="p-0 flex-grow-1">
+      <h5><i class="bi bi-search"></i> Buscar Cliente</h5>
+    </div>
+
+    <div class="p-0">
+      <button type="button" class="btn btn-info" (click)="onAddCustomer()">
+        <i class="bi bi-plus-circle"></i> Nuevo Cliente
+      </button>
+    </div>
+  </div>
+  <div class="card-body">
+    <app-search-components
+      nameInput="Cliente"
+      placeholder="Nombre del Cliente"
+      (searchEvent)="onSearchCustomer($event)"
+    ></app-search-components>
+    <app-table-list-customer
+      [listCustomer]="dataFilterCust"
+      (eventListProd)="onListCustomer()"
+    ></app-table-list-customer>
+  </div>
+</div>
+
+<div *ngIf="showModalCustomer">
+  <app-modal-customer (closeModal)="onModalClose()"></app-modal-customer>
+</div>

@@ -69,7 +69,6 @@ export class ModalProductComponent implements OnInit {
   }
 
   onListChanges(item: Product) {
-    console.log(item);
     this.form.setValue({
       id: item.id,
       code: item.code,

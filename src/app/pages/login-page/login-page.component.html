@@ -1,0 +1,62 @@
+<div class="row m-0 h-100">
+  <div
+    class="col p-0 text-center d-flex justify-content-center align-items-center display-none"
+  >
+    <img src="../../../assets/login.svg" class="w-70" />
+  </div>
+  <div
+    class="col p-0 bg-custom " style="display: flex; flex-direction: column; justify-content: center; align-items: center;"
+  >
+    <h3>Invoice</h3>
+    <form
+      class="w-75"
+    >
+      <div class="alert alert-success alert-dismissible" role="alert">
+        <strong>Aviso!</strong>
+        Has sido desconectado.
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <div class="mb-3">
+        <label for="user_name" class="form-label">Usuario</label>
+        <input
+          class="form-control"
+          placeholder="Usuario"
+          name="user_name"
+          type="text"
+          value=""
+          autofocus=""
+          required=""
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput2" class="form-label"
+          >Contraseña</label
+        >
+        <input
+          class="form-control"
+          placeholder="Contraseña"
+          name="password"
+          type="password"
+          value=""
+          autocomplete="off"
+          required=""
+        />
+      </div>
+
+      <button
+        type="submit"
+        class="btn btn-secondary mt-3"
+        name="login"
+        (click)="onButtonInit()"
+      >
+        Iniciar sesión
+      </button>
+    </form>
+  </div>
+</div>

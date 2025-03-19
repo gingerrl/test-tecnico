@@ -1,0 +1,51 @@
+<div class="mt-2">
+  <table class="table">
+    <thead class="table-light">
+      <tr class="table-info">
+        <th>Codigo</th>
+        <th>Producto</th>
+        <th>Estado</th>
+        <th class="text-right">Precio</th>
+        <th class="text-end">Acciones</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of listProduct">
+      <td>{{ item.code }}</td>
+      <td>{{ item.nameProduct }}</td>
+      <td>{{ item.status }}</td>
+      <td>$ {{ item.price }}</td>
+      <td>
+        <div class="d-flex justify-content-md-end">
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button
+              class="btn btn-secondary"
+              title="Editar producto"
+              (click)="onButtonEdit(item)"
+            >
+              <i class="bi bi-pencil"></i>
+            </button>
+            <button
+              class="btn btn-danger"
+              title="Borrar producto"
+              (click)="onButtonDelete(item)"
+            >
+              <i class="bi bi-trash"></i>
+            </button>
+          </div>
+        </div>
+      </td>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="showUpdateProduct">
+  <app-modal-product (closeModal)="onModalClose()"></app-modal-product>
+</div>
+
+<div *ngIf="showModalDelete">
+  <app-modal-delete
+    [selectItemDel]="itemProductDel"
+    (buttonConfirm)="onButtonConfirm()"
+    (closeModal)="onCloseModalDele()"
+  ></app-modal-delete>
+</div>

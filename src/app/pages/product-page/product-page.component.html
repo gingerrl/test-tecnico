@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="card my-3">
+    <div class="d-flex card-header">
+      <div class="p-0 flex-grow-1">
+        <h5><i class="bi bi-search"></i> Buscar Productos</h5>
+      </div>
+
+      <div class="p-0">
+        <button
+          type="button"
+          class="btn btn-info"
+          (click)="onModalAdd()"
+        >
+          <i class="bi bi-plus-circle"></i> Nuevo Producto
+        </button>
+      </div>
+    </div>
+      <div class="card-body">
+        <app-search-components
+          nameInput="Codigo o nombre"
+          placeholder="Codigo o nombre del producto"
+          (searchEvent)="onSearchProduct($event)"
+        ></app-search-components>
+        <app-table-list-product
+          [listProduct]="dataFilterProd"
+          (eventListProd)="onListProduct()"
+        ></app-table-list-product>
+      </div>
+
+  </div>
+</div>
+
+
+<div *ngIf="showAddProduct">
+  <app-modal-product (closeModal)="onModalClose()"></app-modal-product>
+</div>

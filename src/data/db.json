@@ -1,0 +1,98 @@
+{
+  "invoice": [],
+  "product": [
+    {
+      "id": "",
+      "code": "123555",
+      "nameProduct": "prueba",
+      "status": "1",
+      "price": "20"
+    },
+    {
+      "id": "210562311033210774",
+      "code": "25554",
+      "nameProduct": "prueba dos",
+      "status": "0",
+      "price": "20"
+    },
+    {
+      "id": "b2e95fc81cfef",
+      "code": "20555",
+      "nameProduct": "prubitas",
+      "status": "Activo",
+      "price": "50"
+    },
+    {
+      "id": "37458ec9d0fd3",
+      "code": "698888",
+      "nameProduct": "producto2",
+      "status": "Activo",
+      "price": "63"
+    },
+    {
+      "id": "ed519624262bb",
+      "code": "2587777",
+      "nameProduct": "prueba3",
+      "status": "Inactivo",
+      "price": "98"
+    },
+    {
+      "id": "6f486cf610ac2",
+      "code": "63211111",
+      "nameProduct": "prueba4",
+      "status": "Activo",
+      "price": "20.00"
+    },
+    {
+      "id": "bc75882c6ca51",
+      "code": "693222000",
+      "nameProduct": "prueba5",
+      "status": "Inactivo",
+      "price": "87"
+    }
+  ],
+  "customer": [
+    {
+      "id": "848b",
+      "name": "Roy Carrasco",
+      "phone": "5122256565",
+      "email": "roy@gmail.com",
+      "address": "lima-peruuuu",
+      "status": "Activo"
+    },
+    {
+      "name": "Luis Rosales",
+      "phone": "512369789",
+      "email": "luisito@gmail.com",
+      "address": "lima",
+      "status": "Activo",
+      "id": "d81b"
+    },
+    {
+      "id": "9509",
+      "name": "Jorge Febres",
+      "phone": "5782220222",
+      "email": "jorge@gmail.com",
+      "address": "Arequipa-Peru",
+      "status": "Activo"
+    }
+  ],
+  "user": [
+    {
+      "id": "541",
+      "firstName": "Paolo",
+      "lastName": "Romo",
+      "fullName": "Paolo Romo",
+      "user": "sromo",
+      "email": "paolo@gmail.com"
+    },
+    {
+      "id": "173",
+      "firstName": "Ginger",
+      "lastName": "Romo",
+      "fullName": "Ginger Romo",
+      "user": "sromo",
+      "email": "gingerr@gmail.com"
+    }
+  ]
+}

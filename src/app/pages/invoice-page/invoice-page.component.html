@@ -1,0 +1,28 @@
+<div class="container card my-3">
+  <div class="d-flex card-header">
+    <div class="p-0 flex-grow-1">
+      <h5><i class="bi bi-search"></i> Buscar Facturas</h5>
+    </div>
+
+    <div class="p-0">
+      <button
+        type="button"
+        class="btn btn-info"
+        data-bs-toggle="modal"
+        data-bs-target="#addModalProducto"
+      >
+        <i class="bi bi-plus-circle"></i> Nueva Factura
+      </button>
+    </div>
+  </div>
+  <div class="card-body">
+    <app-search-components
+      nameInput="Cliente o # de factura"
+      placeholder="Nombre del cliente o # de factura"
+      (searchEvent)="onSearchInvoice($event)"
+    ></app-search-components>
+    <app-table-list [listInvoice]="dataFilterInv" (eventListProd)="onListInvoice()"></app-table-list>
+  </div>
+</div>
+
+

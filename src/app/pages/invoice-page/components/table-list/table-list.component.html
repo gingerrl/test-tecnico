@@ -1,0 +1,47 @@
+<div class="mt-2">
+  <table class="table">
+    <thead class="table-light">
+      <tr class="table-info">
+        <th>#</th>
+        <th>Fecha</th>
+        <th>Cliente</th>
+        <th>Vendedor</th>
+        <th>Estado</th>
+        <th>Total</th>
+        <th class="text-end">acciones</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of listInvoice">
+      <td>{{ item.num }}</td>
+      <td>{{ item.date }}</td>
+      <td>{{ item.customer }}</td>
+      <td>{{ item.seller }}</td>
+      <td>{{ item.status }}</td>
+      <td> $ {{ item.total }}</td>
+      <td>
+        <div class="d-flex justify-content-md-end">
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <a href="#" class="btn btn-secondary" title="Editar producto"
+              ><i class="bi bi-pencil"></i
+            ></a>
+            <button
+              class="btn btn-danger"
+              title="Borrar producto"
+              (click)="onButtonDelete(item)"
+              ><i class="bi bi-trash"></i>
+            </button>
+          </div>
+        </div>
+      </td>
+    </tbody>
+  </table>
+</div>
+
+
+<div *ngIf="showModalDelete">
+  <app-modal-delete
+    [selectInvoiceDel]="itemInvoiceDel"
+    (buttonConfirm)="onButtonConfirm()"
+    (closeModal)="onCloseModalDele()"
+  ></app-modal-delete>
+</div>

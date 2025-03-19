@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="card my-3">
+    <div class="d-flex card-header">
+      <div class="p-0 flex-grow-1">
+        <h5><i class="bi bi-search"></i> Buscar usuarios</h5>
+      </div>
+
+      <div class="p-0">
+        <button
+          type="button"
+          class="btn btn-info"
+          (click)="onModalAdd()"
+        >
+          <i class="bi bi-plus-circle"></i> Nuevo usuario
+        </button>
+      </div>
+    </div>
+      <div class="card-body">
+        <app-search-components
+          nameInput="Nombres"
+          placeholder="Nombres del usuario"
+          (searchEvent)="onSearchUser($event)"
+        ></app-search-components>
+        <app-table-list-user
+          [listUser]="dataFilterUser"
+          (eventListProd)="onListUser()"
+        ></app-table-list-user>
+      </div>
+
+  </div>
+</div>
+
+
+<div *ngIf="showAddUser">
+ <app-modal-user (closeModal)="onModalClose()"></app-modal-user>
+</div>

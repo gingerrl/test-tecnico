@@ -1,0 +1,48 @@
+<div class="mt-2">
+  <table class="table">
+    <thead class="table-light">
+      <tr class="table-info">
+        <th>ID</th>
+        <th>Nombres</th>
+        <th>Usuario</th>
+        <th>Email</th>
+        <th class="text-end">Acciones</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of listUser">
+      <td>{{ item.id }}</td>
+      <td>{{ item.firstName | titlecase  }} {{item.lastName | titlecase }} </td>
+      <td>{{ item.user }}</td>
+      <td> {{ item.email }}</td>
+      <td>
+        <div class="d-flex justify-content-md-end">
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button
+              class="btn btn-secondary"
+              title="Editar User"
+              (click)="onButtonEdit(item)"
+            >
+              <i class="bi bi-pencil"></i>
+            </button>
+            <button
+              class="btn btn-danger"
+              title="Borrar producto"
+              (click)="onButtonDelete(item)"
+            >
+              <i class="bi bi-trash"></i>
+            </button>
+          </div>
+        </div>
+      </td>
+    </tbody>
+  </table>
+</div>
+
+
+<div *ngIf="showModalDelete">
+  <app-modal-delete
+    [selectUserDel]="itemUserDel"
+    (buttonConfirm)="onButtonConfirm()"
+    (closeModal)="onCloseModalDele()"
+  ></app-modal-delete>
+</div>

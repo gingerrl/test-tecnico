@@ -56,7 +56,6 @@ export class ModalCustomerComponent implements OnInit {
 
   onListAddCustomer() {
     this.customerService.addCustomer(this.form.value).subscribe((data) => {
-      console.log('customer', data);
       this.eventBus.cast('customer-add', data);
       this.closeModal.emit()
 
@@ -65,7 +64,6 @@ export class ModalCustomerComponent implements OnInit {
 
   onListUpdate() {
     this.customerService.updateCustomer(this.form.controls['id'].value, this.form.value).subscribe((data) => {
-      console.log("updatteee",data)
       this.eventBus.cast('customer-update', data);
       this.closeModal.emit()
     });

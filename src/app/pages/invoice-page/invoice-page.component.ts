@@ -14,13 +14,11 @@ export class InvoicePageComponent implements OnInit {
   constructor(private invoiceService: ListInvoiceService) {}
 
   ngOnInit(): void {
-    console.log("inittt")
     this.onListInvoice();
   }
 
   onListInvoice() {
     this.invoiceService.getListsInvoice().subscribe((data) => {
-      console.log("data",data)
       this.dataInvoi = data;
       this.dataFilterInv = data;
     });

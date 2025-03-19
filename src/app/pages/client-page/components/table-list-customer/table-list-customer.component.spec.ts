@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TableListCustomerComponent } from './table-list-customer.component';
+import { NgEventBus } from 'ng-event-bus';
 
 describe('TableListCustomerComponent', () => {
   let component: TableListCustomerComponent;
@@ -8,7 +9,8 @@ describe('TableListCustomerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TableListCustomerComponent]
+      declarations: [TableListCustomerComponent],
+      providers:[NgEventBus]
     })
     .compileComponents();
 
